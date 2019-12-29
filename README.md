@@ -1,4 +1,4 @@
-# [cheapo](https://cheapo-lmb.herokuapp.com/)
+# [Cheapo](https://cheapo-lmb.herokuapp.com/)
 
 Full-Stack application to help you budget your money and have your friends push to toward better spending habits
 
