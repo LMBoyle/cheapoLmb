@@ -1,0 +1,25 @@
+.friendConnect {
+  margin: 15px 0
+}
+
+.friendConnect img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 8px #BF7E04, inset 0 0 8px #BF7E04;
+}
+
+.friendConnect p {
+  display: inline;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #650D1B
+}
+
+.btn {
+  color: #650D1B;
+}
+
+.icon-group:before {
+  vertical-align: super;
+}

@@ -1,0 +1,28 @@
+.page-footer,
+.footer-copyright {
+  background-color: #6893A1;
+}
+
+.page-footer {
+  padding: 10px 0;
+  /* position: absolute;
+  bottom: 0;
+  width: 100%; */
+}
+
+#footerText a,
+#footerText {
+  color: #650D1B;
+}
+
+#footerText a {
+  padding-left: 10px;
+}
+
+.footerSocial i {
+  font-size: 20px;
+}
+
+#footerText {
+  line-height: 17px;
+}

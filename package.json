@@ -1,0 +1,47 @@
+{
+  "name": "cheapo",
+  "version": "0.1.0",
+  "repository": "https://github.com/LMBoyle/cheapo",
+  "license": "ISC",
+  "description": "",
+  "main": "server/server.js",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "5.6.x"
+  },
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "eslint": "5.12.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^2.9.3",
+    "connect-mongo": "^2.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "express-session": "^1.17.0",
+    "if-env": "^1.0.4",
+    "moment": "^2.24.0",
+    "mongoose": "^5.3.16",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.6.3",
+    "react-chartjs-2": "^2.8.0",
+    "react-moment": "^0.9.6",
+    "react-reveal": "^1.2.2"
+  }
+}

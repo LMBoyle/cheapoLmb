@@ -1,0 +1,26 @@
+.bg-light {
+  background-color: #6893A1!important;
+}
+
+.navbar-light .navbar-brand,
+nav a {
+  color: #650D1B
+}
+
+nav i {
+  vertical-align: middle;
+  padding: 0 5px
+}
+
+.nav li {
+  margin-right: 25px
+}
+
+.userName {
+  text-transform: capitalize;
+}
+
+nav {
+  z-index: 9999;
+}
+

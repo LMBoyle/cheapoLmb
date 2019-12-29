@@ -1,0 +1,21 @@
+.nav-link {
+  color: #650D1B
+}
+
+.nav-tabs .nav-link.active {
+  border-color: #BF7E04 #BF7E04 #fff
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #BF7E04;
+}
+
+.nav li {
+  margin-right: 0!important;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: #fff #fff #BF7E04;
+  background-color: #577720;
+  color: #fff
+}
