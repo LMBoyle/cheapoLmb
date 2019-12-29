@@ -1,11 +1,8 @@
-# cheapo
-[![Build Status](https://travis-ci.com/LMBoyle/cheapo.svg?branch=master)](https://travis-ci.com/LMBoyle/cheapo)
+# [cheapo](https://cheapo-lmb.herokuapp.com/)
 
-A website help you budget your money and have your friends push to toward better spending habits
+Full-Stack application to help you budget your money and have your friends push to toward better spending habits
 
-Made by [Luke](https://github.com/LMBoyle), [Krishti](https://github.com/krishb09), and [Maurice](https://github.com/moeewebb)
-
-## Languages/Technologies 
+## Built With...
 * React
 * HTML
 * Bootstrap
@@ -38,12 +35,16 @@ Made by [Luke](https://github.com/LMBoyle), [Krishti](https://github.com/krishb0
 - [ ] Re-encrypt password if user changes it
 
 ## Demo
+
 ![Demo Gif](./client/public/cheapoDemo.gif)
 
 ## Links
 
-[Deployed link](https://cheapo-lmk.herokuapp.com/)
+[Original Deployed link](https://cheapo-lmk.herokuapp.com/)
 
-[Github Repo](https://github.com/LMBoyle/cheapo)
+[Original Github Repo](https://github.com/LMBoyle/cheapo)
 
 [Presentation](https://docs.google.com/presentation/d/1LxdLOHVndMekW2jzFvFRxmnqDS16xsBc_cBJzBlE19Y/edit?usp=sharing)
+
+
+&copy; 2019 [Luke](https://github.com/LMBoyle), [Krishti](https://github.com/krishb09), and [Maurice](https://github.com/moeewebb)
