@@ -11,11 +11,11 @@ router
   .get(friendsController.findAll);
 
 // Matches with "/api/friends/:id"
-router
-  .route("/:id")
-  .get(friendsController.findById)
-  .put(friendsController.update)
-  .delete(friendsController.remove);
+// router
+//   .route("/:id")
+//   .get(friendsController.findById)
+//   .put(friendsController.update)
+//   .delete(friendsController.remove);
 
 // Export =========================================================================================
 

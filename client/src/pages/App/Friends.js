@@ -1,6 +1,6 @@
 // Imports ========================================================================================
 
-import React from "react";
+import React, { Component } from "react";
 
 // Components
 import { Col, Row, Container } from "../../components/Grid";
@@ -10,43 +10,92 @@ import Headshot from "../../components/Headshot"
 
 // Utils
 import friendsData from "../../utils/mockFriends"
+import AUTH from '../../utils/AUTH';
+import friendsAPI from '../../utils/friendsAPI'
 
 // Images
 const friends = require("../../assets/img/friends.jpg");
 
 // Functions ======================================================================================
 
-function Friends() {
-  return (
-    <Container>
-      <Card
-        cardClass={"cardWrap"}
-      >
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <CardImg 
-                src = {friends}
-                alt = "friendsCast"
+class Friends extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      firstName: '',
+      lastName: '',
+      users: []
+    }
+  }
+
+  // When page loads, load users
+  componentDidMount() {
+    this.loadUser();
+    this.getFriends();
+  }
+
+  // Request to load user
+  loadUser = () => {
+    AUTH.getUser()
+      .then(res =>
+        this.setState({ 
+          firstName: res.data.user.firstName,
+          lastName: res.data.user.lastName,
+        })
+      )
+      .catch(err => console.log(err));
+  };
+
+  // Request to get other users
+  getFriends = () => {
+    friendsAPI.getFriends()
+      .then(res =>
+        this.setState({ 
+          users: res.data.users
+        })
+      )
+      .catch(err => console.log(err));
+  };
+
+  render() {
+    return (
+      <Container>
+        <Card
+          cardClass={"cardWrap"}
+        >
+          <Row>
+            <Col size="md-12">
+              <Jumbotron>
+                <CardImg 
+                  src = {friends}
+                  alt = "friendsCast"
+                />
+              </Jumbotron>
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-12">
+            { friendsData.map((friend, i) => (
+              < Headshot
+                key={i} 
+                img={friend.img}
+                firstName={friend.firstName}
+                lastName={friend.lastName}
               />
-            </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-          { friendsData.map((friend, i) => (
-            < Headshot
-              key={i} 
-              img={friend.img}
-              firstName={friend.firstName}
-              lastName={friend.lastName}
-            />
-          ))}
-          </Col>
-        </Row>
-      </Card>
-    </Container>
-  );
+            ))}
+            </Col>
+          </Row>
+          <Card>
+            { this.state.users.map((friend, i) => (
+              <h1> {friend.firstName} </h1>
+            ))}
+          </Card>
+        </Card>
+      </Container>
+    );
+  };
 }
 
 // Export =========================================================================================

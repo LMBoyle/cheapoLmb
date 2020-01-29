@@ -27,7 +27,7 @@ class Profile extends Component {
     }
   }
 
-  // When page loads, load the goals
+  // When page loads, load the user
   componentDidMount() {
     this.loadUser();
   }

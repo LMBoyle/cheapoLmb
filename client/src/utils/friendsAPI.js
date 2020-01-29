@@ -8,19 +8,19 @@ export default {
 
   // Methods ======================================================================================
 
-  // Gets all users
-  getUsers: function() {
-    return axios.get("/api/users");
+  // Gets all friends
+  getFriends: function() {
+    return axios.get("/api/friends");
   },
   // Gets the user with the given id
-  getUser: function(id) {
-    return axios.get("/api/users/" + id);
+  getFriend: function(id) {
+    return axios.get("/api/friends/" + id);
   },
-  updateUser: function(id, userData) {
-    return axios.put("/api/users/" + id, userData)
+  updateFriend: function(id, userData) {
+    return axios.put("/api/friends/" + id, userData)
   },
   // Deletes the user with the given id
-  deleteUser: function(id) {
-    return axios.delete("/api/users/" + id);
+  deleteFriend: function(id) {
+    return axios.delete("/api/friends/" + id);
   }
 };
