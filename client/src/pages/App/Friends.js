@@ -26,11 +26,11 @@ class Friends extends Component {
     this.state = {
       firstName: '',
       lastName: '',
-      users: []
+      friends: []
     }
   }
 
-  // When page loads, load users
+  // When page loads, load users and friends
   componentDidMount() {
     this.loadUser();
     this.getFriends();
@@ -53,7 +53,7 @@ class Friends extends Component {
     friendsAPI.getFriends()
       .then(res =>
         this.setState({ 
-          users: res.data.users
+          friends: res.data.users
         })
       )
       .catch(err => console.log(err));
@@ -77,7 +77,7 @@ class Friends extends Component {
           </Row>
           <Row>
             <Col size="md-12">
-            { friendsData.map((friend, i) => (
+            { this.state.friends.map((friend, i) => (
               < Headshot
                 key={i} 
                 img={friend.img}
@@ -87,11 +87,6 @@ class Friends extends Component {
             ))}
             </Col>
           </Row>
-          <Card>
-            { this.state.users.map((friend, i) => (
-              <h1> {friend.firstName} </h1>
-            ))}
-          </Card>
         </Card>
       </Container>
     );
