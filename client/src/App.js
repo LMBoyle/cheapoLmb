@@ -3,7 +3,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom';
 
-
 // Pages
 import LoginForm from "./pages/Auth/LoginForm"
 import SignupForm from "./pages/Auth/SignupForm"
@@ -17,7 +16,6 @@ import NotUser from "./pages/Error/NotUser";
 
 // Components
 import Nav from "./components/Nav";
-import Footer from "./components/Footer"
 
 // Other
 import AUTH from "./utils/AUTH"
@@ -116,7 +114,6 @@ class App extends Component {
             </div>
           </div>
         )}
-        <Footer />
       </>
     );
   };

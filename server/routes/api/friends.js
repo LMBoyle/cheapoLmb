@@ -1,16 +1,21 @@
 // Dependencies ===================================================================================
 
 const router = require("express").Router();
-const goalsRoutes = require("./goals");
-const friendsRoutes = require("./friends");
+const friendsController = require("../../controllers/friendsController");
 
 // Routes =========================================================================================
 
-// Goals routes
-router.use("/goals", goalsRoutes);
+// Matches with "/api/friends"
+router
+  .route("/")
+  .get(friendsController.findAll);
 
-// Friends routes
-router.use("/friends", friendsRoutes);
+// Matches with "/api/friends/:id"
+router
+  .route("/:id")
+  .get(friendsController.findById)
+  .put(friendsController.update)
+  .delete(friendsController.remove);
 
 // Export =========================================================================================
 

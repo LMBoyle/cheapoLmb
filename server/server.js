@@ -1,6 +1,6 @@
 // Dependencies ===================================================================================
 
-const express  = require('express')
+const express = require('express')
 const routes = require("./routes");
 const morgan = require('morgan');
 const session = require('express-session');
@@ -19,7 +19,6 @@ app.use(express.json());
 // Environment ====================================================================================
 
 // If it's production environment!
-
 if (process.env.NODE_ENV === 'production') {
 	const path = require('path');
 	console.log('YOU ARE IN THE PRODUCTION ENV');
@@ -29,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
 	});
 }
 
-// Loading environmental variables here
+// If it's not production environment!
 if (process.env.NODE_ENV !== 'production') {
 	console.log('loading dev environments');
 	require('dotenv').config();

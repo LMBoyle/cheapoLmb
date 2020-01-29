@@ -10,7 +10,7 @@ import NavTab from "../../components/NavTab";
 import { ShowTab, NewTab, SaveTab } from "../../components/Goals"
 
 // Others
-import API from "../../utils/API"
+import API from "../../utils/goalsAPI"
 
 let sum;
 
