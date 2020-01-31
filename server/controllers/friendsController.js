@@ -12,7 +12,7 @@ module.exports = {
   findAll: function(req, res) {
     if (req.user) {
       db.User
-        .find({}, {firstName: 1, lastName: 1})
+        .find({}, {firstName: 1, lastName: 1, image: 1})
         .then(users => {
           res.json({ users: users });
         })

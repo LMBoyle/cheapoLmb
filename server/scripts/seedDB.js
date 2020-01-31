@@ -15,7 +15,8 @@ async function seed(req, res) {
     console.log(err)
   }
   
-  return ("saved all users");
+  console.log("saved all users");
+  return process.exit(0)
 }
 
 function seedUser(d) {

@@ -9,7 +9,6 @@ import { Card, CardImg } from "../../components/Card"
 import Headshot from "../../components/Headshot"
 
 // Utils
-import friendsData from "../../utils/mockFriends"
 import AUTH from '../../utils/AUTH';
 import friendsAPI from '../../utils/friendsAPI'
 
@@ -60,6 +59,7 @@ class Friends extends Component {
   };
 
   render() {
+    console.log(this.state.friends)
     return (
       <Container>
         <Card
@@ -80,7 +80,7 @@ class Friends extends Component {
             { this.state.friends.map((friend, i) => (
               < Headshot
                 key={i} 
-                img={friend.img}
+                img={friend.image}
                 firstName={friend.firstName}
                 lastName={friend.lastName}
               />
