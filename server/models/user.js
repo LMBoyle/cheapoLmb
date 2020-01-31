@@ -12,7 +12,8 @@ const userSchema = new Schema({
 	firstName: { type: String, unique: false },
 	lastName: { type: String, unique: false },
   username: { type: String, unique: false, required: false },
-  password: { type: String, unique: false, required: false },
+	password: { type: String, unique: false, required: false },
+	image: { type: String, unique: false, default: 'https://www.securities-services.societegenerale.com/uploads/tx_bisgbio/default-profile.png' },
   goals: [
     {
       // Store ObjectIds in the array
