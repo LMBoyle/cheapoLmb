@@ -21,6 +21,10 @@ code {
   background-color: white;
 }
 
+footer {
+  box-shadow: 0px -4px 9px -2px #577720;
+}
+
 .page-footer,
 .footer-copyright {
   background-color: #6893A1;
@@ -29,7 +33,7 @@ code {
 .page-footer {
   padding: 10px 0;
   position: absolute;
-  bottom: 0;
+  bottom: auto;
   width: 100%;
 }
 
