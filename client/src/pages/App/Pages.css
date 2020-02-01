@@ -11,6 +11,33 @@ div.container {
   width: 80%;
 }
 
+header {
+  margin: 50px 0;
+  color: #BF7E04;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+img {
+  width: 100%;
+  max-height: 233px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+h2 {
+  color: #BF7E04
+}
+
+p {
+  font-size: 20px;
+}
+
+section {
+  text-align: center;
+}
+
 /* Dashboard ====================================================================================== */
 
 button .btn {
