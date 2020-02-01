@@ -1,26 +1,32 @@
+nav {
+  z-index: 9999;
+  box-shadow: 0px 4px 9px -2px #577720;
+}
+
 .bg-light {
   background-color: #6893A1!important;
 }
 
 .navbar-light .navbar-brand,
 nav a {
-  color: #650D1B
+  color: #650D1B;
 }
 
-nav i {
-  vertical-align: middle;
-  padding: 0 5px
+a svg {
+  font-size: 25px;
+  vertical-align: middle
 }
 
-.nav li {
+.navbar-light .navbar-brand,
+.navbar-brand svg {
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+span a {
   margin-right: 25px
 }
 
 .userName {
   text-transform: capitalize;
 }
-
-nav {
-  z-index: 9999;
-}
-
