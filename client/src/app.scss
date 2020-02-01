@@ -1,0 +1,46 @@
+/* ========================================= Import(s) ========================================= */
+
+@import 'index';
+
+/* =========================================== Root  =========================================== */
+
+#root {
+  background-color: white;
+}
+
+/* ========================================== Footer  ========================================== */
+
+footer {
+  box-shadow: 0px -4px 9px -2px $primary-green;
+}
+
+.page-footer,
+.footer-copyright {
+  background-color: $primary-blue;
+}
+
+.page-footer {
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+#footerText,
+#footerText a {
+  color: $primary-red;
+}
+
+#footerText {
+  line-height: 17px;
+}
+
+#footerText a {
+  padding-left: 10px;
+}
+
+.footerSocial i {
+  font-size: 20px;
+}
+
+

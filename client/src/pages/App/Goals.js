@@ -1,20 +1,20 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
 import React, { Component } from 'react';
 import Moment from 'moment'
 
 // Components
-import { Container } from "../../components/Grid";
-import { Card } from "../../components/Card"
-import NavTab from "../../components/NavTab";
-import { ShowTab, NewTab, SaveTab } from "../../components/Goals"
+import { Container } from '../../components/Grid';
+import { Card } from '../../components/Card'
+import NavTab from '../../components/NavTab';
+import { ShowTab, NewTab, SaveTab } from '../../components/Goals'
 
 // Others
-import API from "../../utils/goalsAPI"
+import API from '../../utils/goalsAPI'
 
 let sum;
 
-// Functions ======================================================================================
+// ========================================== Functions  ==========================================
 
 class Goals extends Component {
 
@@ -46,11 +46,11 @@ class Goals extends Component {
       .then(res =>
         this.setState({ 
           goals: res.data.goals, 
-          goalName: "", 
-          weeklyAmt: "", 
-          totalAmt: "", 
-          totalSavedAmt: "", 
-          weeklySavedAmt: "", 
+          goalName: ', 
+          weeklyAmt: ', 
+          totalAmt: ', 
+          totalSavedAmt: ', 
+          weeklySavedAmt: ', 
           selectedGoal: '', 
           selectedId: '', 
           amtToSave: '',
@@ -107,7 +107,7 @@ class Goals extends Component {
       $push: {
         progress: [{
           savingAmt: this.state.amtToSave,
-          dateSaved: Moment(new Date()).format("YYYY/MM/DD")
+          dateSaved: Moment(new Date()).format('YYYY/MM/DD')
         }]
       }
     })
@@ -136,17 +136,17 @@ class Goals extends Component {
     return (
       <Container>
         <Card
-          cardClass={"cardWrap"}
-          styleBody={{padding: "0 0 50px 0"}}
+          cardClass={'cardWrap'}
+          styleBody={{padding: '0 0 50px 0'}}
         >
           {/* Tabs for Goal Page */}
           <NavTab>
             <Container>
               {/* Tab Content */}
-              <div className="tab-content mt-5" id="myTabContent">
+              <div className='tab-content mt-5' id='myTabContent'>
 
                 {/* Tab To See Goals */}
-                <div className="tab-pane fade active show" id="see" role="tabpanel" aria-labelledby="see-tab">
+                <div className='tab-pane fade active show' id='see' role='tabpanel' aria-labelledby='see-tab'>
                   {this.state.goals.length ? (
                     <ShowTab
                       goals={this.state.goals}
@@ -157,7 +157,7 @@ class Goals extends Component {
                 </div>
 
                 {/* Tab To Add Goals */}
-                <div className="tab-pane fade" id="add" role="tabpanel" aria-labelledby="add-tab">
+                <div className='tab-pane fade' id='add' role='tabpanel' aria-labelledby='add-tab'>
                   <NewTab
                     goalName={this.state.goalName}
                     totalAmt={this.state.totalAmt}
@@ -168,7 +168,7 @@ class Goals extends Component {
                 </div>
                 
                 {/* Tab To Add to Goal */}
-                <div className="tab-pane fade" id="save" role="tabpanel" aria-labelledby="save-tab"> 
+                <div className='tab-pane fade' id='save' role='tabpanel' aria-labelledby='save-tab'> 
                   <SaveTab
                     goals={this.state.goals}
                     selectedGoal={this.state.selectedGoal}
@@ -191,6 +191,6 @@ class Goals extends Component {
   }
 }
 
-// Export =========================================================================================
+// ============================================ Export ============================================
 
 export default Goals;

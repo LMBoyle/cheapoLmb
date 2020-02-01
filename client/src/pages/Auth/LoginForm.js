@@ -1,9 +1,15 @@
+// =========================================== Imports  ===========================================
+
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
+
+// Components
 import { Container, Row, Col } from '../../components/Grid';
 import { Card } from '../../components/Card';
 import { Input, FormBtn } from '../../components/Form';
 import Facebook from '../../components/SocialMedia/Facebook'; 
+
+// ========================================== Functions  ==========================================
 
 class LoginForm extends Component {
 
@@ -38,49 +44,49 @@ class LoginForm extends Component {
     } else {
       return (
         <Container>
-          <Card
-            cardClass={"cardWrap"}
-          >
-            <Row>
-              <Col size="md-3"></Col>
-              <Col size="md-6">
-                <Card title="Login to Cheapo">
-                  <Facebook />
+          <main id='loginMain'>
+            <Row justify='content-md-center'>
+              <Col size='md-6'>
+              {/* Facebook Button */}
+                <Facebook />
 
-                  <div className="loginSeparator text-center">
-                    <span className="sideLine"></span>
-                    <span className="sepText"> Or </span>
-                    <span className="sideLine"></span>
-                  </div>
+                {/* Separator */}
+                <div className='loginSeparator text-center'>
+                  <span className='sideLine'></span>
+                  <span className='sepText'> Or </span>
+                  <span className='sideLine'></span>
+                </div>
 
-                  <form style={{marginTop: 10}}>
-                    <label htmlFor="username"> Username: </label>
-                    <Input
-                      type="text"
-                      name="username"
-                      value={this.state.username}
-                      onChange={this.handleChange}
-                    />
-                    <label htmlFor="password"> Password: </label>
-                    <Input
-                      type="password"
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.handleChange}
-                    />
-                    <Link to="/signup"> Register </Link>
-                    
-                    <FormBtn onClick={this.handleSubmit}> Login </FormBtn>
-                  </form>
-                </Card>
+                {/* Login Form */}
+                <form style={{marginTop: 10}}>
+                  <label htmlFor='username'> Username: </label>
+                  <Input
+                    type='text'
+                    name='username'
+                    value={this.state.username}
+                    onChange={this.handleChange}
+                  />
+                  <label htmlFor='password'> Password: </label>
+                  <Input
+                    type='password'
+                    name='password'
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                  />
+                  <Link to='/signup'> Register </Link>
+                  
+                  <FormBtn onClick={this.handleSubmit}> Login </FormBtn>
+                </form>
+
               </Col>
-              <Col size="md-3"></Col>
             </Row>
-          </Card>
+          </main>
         </Container>
       )
     }
   }
 }
+
+// ============================================ Export ============================================
 
 export default LoginForm;

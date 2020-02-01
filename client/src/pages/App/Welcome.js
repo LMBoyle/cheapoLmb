@@ -1,4 +1,4 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
 import React, { Component } from 'react';
 import Rotate from 'react-reveal/Rotate';
@@ -13,7 +13,7 @@ const savingJars = require('../../assets/img/savingJars.jpg');
 const friendsMoney = require('../../assets/img/friendsMoney.jpg');
 
 
-// Functions ======================================================================================
+// ========================================== Functions  ==========================================
 
 class Welcome extends Component {
   
@@ -68,6 +68,6 @@ class Welcome extends Component {
   };
 };
 
-// Export =========================================================================================
+// ============================================ Export ============================================
 
 export default Welcome;

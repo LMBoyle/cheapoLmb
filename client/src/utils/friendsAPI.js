@@ -1,26 +1,30 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
-import axios from "axios";
+import axios from 'axios';
 
-// Export =========================================================================================
+// ============================================ Export ============================================
 
 export default {
 
-  // Methods ======================================================================================
+  // ========================================== Methods  ==========================================
 
   // Gets all friends
   getFriends: function() {
-    return axios.get("/api/friends");
+    return axios.get('/api/friends');
   },
+
   // Gets the user with the given id
   getFriend: function(id) {
-    return axios.get("/api/friends/" + id);
+    return axios.get('/api/friends/' + id);
   },
+
   updateFriend: function(id, userData) {
-    return axios.put("/api/friends/" + id, userData)
+    return axios.put('/api/friends/' + id, userData)
   },
+  
   // Deletes the user with the given id
   deleteFriend: function(id) {
-    return axios.delete("/api/friends/" + id);
+    return axios.delete('/api/friends/' + id);
   }
+  
 };

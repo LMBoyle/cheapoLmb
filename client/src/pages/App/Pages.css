@@ -61,6 +61,10 @@ button .btn {
 
 /* Login ========================================================================================== */
 
+#loginMain {
+  margin: 0 auto;
+}
+
 .sideLine {
   border-bottom: 1px solid #BF7E04;
   width: 43%;

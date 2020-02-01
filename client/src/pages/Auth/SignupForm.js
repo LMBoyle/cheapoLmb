@@ -1,4 +1,4 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ import { Input, FormBtn } from '../../components/Form';
 // Other
 import AUTH from '../../utils/AUTH';
 
-// Functions ======================================================================================
+// ========================================== Functions  ==========================================
 
 class SignupForm extends Component {
 
@@ -62,54 +62,54 @@ class SignupForm extends Component {
     return (
       <Container>
         <Card
-          cardClass={"cardWrap"}
+          cardClass={'cardWrap'}
         >
           <Row>
-            <Col size="md-3"></Col>
-            <Col size="md-6">
-              <Card title="Register for Cheapo">
+            <Col size='md-3'></Col>
+            <Col size='md-6'>
+              <Card title='Register for Cheapo'>
                 <form style={{ marginTop: 10 }}>
-                  <label htmlFor="username"> First name: </label>
+                  <label htmlFor='username'> First name: </label>
                   <Input
-                    type="text"
-                    name="firstName"
+                    type='text'
+                    name='firstName'
                     value={this.state.firstName}
                     onChange={this.handleChange}
                   />
-                  <label htmlFor="username"> Last name: </label>
+                  <label htmlFor='username'> Last name: </label>
                   <Input
-                    type="text"
-                    name="lastName"
+                    type='text'
+                    name='lastName'
                     value={this.state.lastName}
                     onChange={this.handleChange}
                   />
-                  <label htmlFor="username"> Username: </label>
+                  <label htmlFor='username'> Username: </label>
                   <Input
-                    type="text"
-                    name="username"
+                    type='text'
+                    name='username'
                     value={this.state.username}
                     onChange={this.handleChange}
                   />
-                  <label htmlFor="password"> Password: </label>
+                  <label htmlFor='password'> Password: </label>
                   <Input
-                    type="password"
-                    name="password"
+                    type='password'
+                    name='password'
                     value={this.state.password}
                     onChange={this.handleChange}
                   />
-                  <label htmlFor="confirmPassword"> Confirm Password: </label>
+                  <label htmlFor='confirmPassword'> Confirm Password: </label>
                   <Input
-                    type="password"
-                    name="confirmPassword"
+                    type='password'
+                    name='confirmPassword'
                     value={this.state.confirmPassword}
                     onChange={this.handleChange}
                   />
-                  <Link to="/login"> Login </Link>
+                  <Link to='/login'> Login </Link>
                   <FormBtn onClick={this.handleSubmit}> Register </FormBtn>
                 </form>
               </Card>
             </Col>
-            <Col size="md-3"></Col>
+            <Col size='md-3'></Col>
           </Row>
         </Card>
       </Container>
@@ -117,6 +117,6 @@ class SignupForm extends Component {
   }
 }
 
-// Export =========================================================================================
+// ============================================ Export ============================================
 
 export default SignupForm;

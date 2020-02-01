@@ -1,30 +1,35 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
-import axios from "axios";
+import axios from 'axios';
 
-// Export =========================================================================================
+// ============================================ Export ============================================
 
 export default {
 
-  // Methods ======================================================================================
+  // ========================================== Methods  ==========================================
 
   // Gets all goals
   getGoals: function() {
-    return axios.get("/api/goals");
+    return axios.get('/api/goals');
   },
+
   // Gets the goal with the given id
   getGoal: function(id) {
-    return axios.get("/api/goals/" + id);
+    return axios.get('/api/goals/' + id);
   },
+
   updateGoal: function(id, goalData) {
-    return axios.put("/api/goals/" + id, goalData)
+    return axios.put('/api/goals/' + id, goalData)
   },
+
   // Deletes the goal with the given id
   deleteGoal: function(id) {
-    return axios.delete("/api/goals/" + id);
+    return axios.delete('/api/goals/' + id);
   },
+
   // Saves a goal to the database
   saveGoal: function(goalData) {
-    return axios.post("/api/goals", goalData);
+    return axios.post('/api/goals', goalData);
   }
+
 };

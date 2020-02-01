@@ -1,21 +1,21 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // Components
-import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
-import { Card, CardImg } from "../../components/Card"
-import Headshot from "../../components/Headshot"
+import { Col, Row, Container } from '../../components/Grid';
+import Jumbotron from '../../components/Jumbotron';
+import { Card, CardImg } from '../../components/Card'
+import Headshot from '../../components/Headshot'
 
 // Utils
 import AUTH from '../../utils/AUTH';
 import friendsAPI from '../../utils/friendsAPI'
 
 // Images
-const friends = require("../../assets/img/friends.jpg");
+const friends = require('../../assets/img/friends.jpg');
 
-// Functions ======================================================================================
+// ========================================== Functions  ==========================================
 
 class Friends extends Component {
 
@@ -63,20 +63,20 @@ class Friends extends Component {
     return (
       <Container>
         <Card
-          cardClass={"cardWrap"}
+          cardClass={'cardWrap'}
         >
           <Row>
-            <Col size="md-12">
+            <Col size='md-12'>
               <Jumbotron>
                 <CardImg 
                   src = {friends}
-                  alt = "friendsCast"
+                  alt = 'friendsCast'
                 />
               </Jumbotron>
             </Col>
           </Row>
           <Row>
-            <Col size="md-12">
+            <Col size='md-12'>
             { this.state.friends.map((friend, i) => (
               < Headshot
                 key={i} 
@@ -93,6 +93,6 @@ class Friends extends Component {
   };
 }
 
-// Export =========================================================================================
+// ============================================ Export ============================================
 
 export default Friends;

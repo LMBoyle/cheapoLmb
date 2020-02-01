@@ -1,0 +1,81 @@
+/* ========================================= Import(s) ========================================= */
+
+@import 'index';
+
+/* ========================================== Welcome ========================================== */
+
+div.container {
+  width: 80%
+}
+
+header {
+  margin: 50px 0;
+  color: $primary-gold;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+img {
+  width: 100%;
+  max-height: 233px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+h2 {
+  color: $primary-gold
+}
+
+p {
+  font-size: 20px;
+}
+
+section {
+  text-align: center;
+}
+
+/* ========================================= Dashboard ========================================= */
+
+button .btn {
+  float: right;
+}
+
+.btn {
+  color: $primary-red;
+}
+
+/* ========================================= Profile   ========================================= */
+
+/* ========================================== Friends ========================================== */
+
+/* =========================================== Goals =========================================== */
+
+.goalDropdown,
+#selectedGoalTitle {
+  text-transform: capitalize;
+}
+
+/* =========================================== Login =========================================== */
+
+#loginMain {
+  margin: 0 auto;
+}
+
+.sideLine {
+  border-bottom: 1px solid $primary-gold;
+  width: 43%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sepText {
+  width: 11%;
+  display: inline-block;
+  color: #650D1B;
+  text-align: center;
+}
+
+#root {
+  background-color: blue
+}

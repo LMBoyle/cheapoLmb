@@ -1,17 +1,17 @@
-// Imports ========================================================================================
+// =========================================== Imports  ===========================================
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // Components
-import { Col, Row, Container } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron";
-import { Card } from "../../components/Card";
-import { FormBtn, Input } from "../../components/Form";
+import { Col, Row, Container } from '../../components/Grid';
+import Jumbotron from '../../components/Jumbotron';
+import { Card } from '../../components/Card';
+import { FormBtn, Input } from '../../components/Form';
 
 // Other
 import AUTH from '../../utils/AUTH';
 
-// Functions ======================================================================================
+// ========================================== Functions  ==========================================
 
 class Profile extends Component {
 
@@ -70,44 +70,44 @@ render(){
   return (
     <Container fluid>
       <Card
-        cardClass={"cardWrap"}
+        cardClass={'cardWrap'}
       >
         <Row>
-          <Col size="md-12">
+          <Col size='md-12'>
             <Jumbotron>
             <h1> Update User Profile! </h1>
             </Jumbotron>
           </Col>
         </Row>
       <Row>
-        <Col size="md-12">            
-            <Card title="user profile">
+        <Col size='md-12'>            
+            <Card title='user profile'>
               <form style={{ marginTop: 10 }}>
-                <label htmlFor="firstname"> First Name: </label>
+                <label htmlFor='firstname'> First Name: </label>
                 <Input
-                  type="text"
-                  name="firstName"
+                  type='text'
+                  name='firstName'
                   value={this.state.firstName}
                   onChange={this.handleChange}
                 />
-                <label htmlFor="lastname"> Last Name: </label>
+                <label htmlFor='lastname'> Last Name: </label>
                 <Input
-                  type="text"
-                  name="lastName"
+                  type='text'
+                  name='lastName'
                   value={this.state.lastName}
                   onChange={this.handleChange}
                 />
-                <label htmlFor="username"> Username: </label>
+                <label htmlFor='username'> Username: </label>
                 <Input
-                  type="text"
-                  name="username"
+                  type='text'
+                  name='username'
                   value={this.state.username}
                   onChange={this.handleChange}
                 />
-                <label htmlFor="password"> Password: </label>
+                <label htmlFor='password'> Password: </label>
                 <Input
-                  type="password"
-                  name="password"
+                  type='password'
+                  name='password'
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
@@ -126,6 +126,7 @@ render(){
   );
 }
 }
-// Export =========================================================================================
+
+// ============================================ Export ============================================
 
 export default Profile;
