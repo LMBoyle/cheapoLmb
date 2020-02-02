@@ -45,14 +45,14 @@ class Goals extends Component {
     API.getGoals()
       .then(res =>
         this.setState({ 
-          goals: res.data.goals, 
-          goalName: ', 
-          weeklyAmt: ', 
-          totalAmt: ', 
-          totalSavedAmt: ', 
-          weeklySavedAmt: ', 
-          selectedGoal: '', 
-          selectedId: '', 
+          goals: res.data.goals,
+          goalName: '',
+          weeklyAmt: '',
+          totalAmt: '',
+          totalSavedAmt: '',
+          weeklySavedAmt: '',
+          selectedGoal: '',
+          selectedId: '',
           amtToSave: '',
           chartData: []
         })

@@ -1,0 +1,28 @@
+/* ========================================= Import(s) ========================================= */
+
+@import '../../index';
+
+/* ========================================== Buttons ========================================== */
+
+.btn {
+  margin-top: 10px;
+  color: white!important;
+  a {
+    color: white!important;
+  }
+}
+
+.btn- {
+  &gold {
+    background-color: $primary-gold;
+  }
+  &red {
+    background-color: $primary-red;
+  }
+  &green {
+    background-color: $primary-green;
+  }
+  &blue {
+    background-color: $primary-blue;
+  }
+}

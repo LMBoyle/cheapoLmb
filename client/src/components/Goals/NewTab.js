@@ -5,7 +5,7 @@ import React from "react";
 // Components
 import { Col, Row } from "../../components/Grid";
 import { Card } from "../../components/Card"
-import { FormBtn, Input } from "../../components/Form";
+import { Input } from "../../components/Form";
 
 // Functions ======================================================================================
 
@@ -40,12 +40,12 @@ export const NewTab = props => {
               onChange={handleChange}
               prepend="true"
             />
-            <FormBtn
+            {/* <Btn
               disabled={!(goalName && totalAmt && weeklyAmt)}
               onClick={handleSubmit}
             >
               Submit Goal!
-            </FormBtn>
+            </Btn> */}
           </form>
         </Card>
       </Col>

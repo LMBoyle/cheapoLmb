@@ -1,6 +1,6 @@
 /* ========================================= Import(s) ========================================= */
 
-@import 'index';
+@import '../../index';
 
 /* ========================================== Welcome ========================================== */
 
@@ -59,7 +59,11 @@ button .btn {
 /* =========================================== Login =========================================== */
 
 #loginMain {
-  margin: 0 auto;
+  margin: 9rem auto;
+}
+
+.loginSeparator {
+  margin: 15px 0;
 }
 
 .sideLine {
@@ -74,8 +78,4 @@ button .btn {
   display: inline-block;
   color: #650D1B;
   text-align: center;
-}
-
-#root {
-  background-color: blue
 }

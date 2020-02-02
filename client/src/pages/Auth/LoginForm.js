@@ -3,10 +3,14 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
+// Style
+import '../App/Pages.scss';
+
 // Components
 import { Container, Row, Col } from '../../components/Grid';
 import { Card } from '../../components/Card';
-import { Input, FormBtn } from '../../components/Form';
+import { Input } from '../../components/Form';
+import Btn from '../../components/Button'
 import Facebook from '../../components/SocialMedia/Facebook'; 
 
 // ========================================== Functions  ==========================================
@@ -24,14 +28,14 @@ class LoginForm extends Component {
 
 	}
 
-  handleChange = (event) => {
+  handleChange = (e) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
     this.props.login(this.state.username, this.state.password);
     this.setState({
       redirectTo: '/'
@@ -41,7 +45,9 @@ class LoginForm extends Component {
   render() {
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
-    } else {
+    } 
+    
+    else {
       return (
         <Container>
           <main id='loginMain'>
@@ -73,9 +79,9 @@ class LoginForm extends Component {
                     value={this.state.password}
                     onChange={this.handleChange}
                   />
-                  <Link to='/signup'> Register </Link>
+                  <Btn btnColor='green'><Link to='/signup'> Register </Link></Btn>
                   
-                  <FormBtn onClick={this.handleSubmit}> Login </FormBtn>
+                  <Btn btnColor='gold' onClick={this.handleSubmit} style={{float: 'right'}}> Login </Btn>
                 </form>
 
               </Col>

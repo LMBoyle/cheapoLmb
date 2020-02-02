@@ -4,7 +4,7 @@ import React from "react";
 
 // Components
 import { Col, Row } from "../Grid";
-import { FormBtn, Input } from "../Form";
+import { Input } from "../Form";
 
 // Other
 import { Line } from "react-chartjs-2"
@@ -82,12 +82,12 @@ export const SaveTab = props => {
               prepend="true"
             />
 
-            <FormBtn
+            {/* <Btn
               disabled={!(amtToSave)}
               onClick={handleAdd}
             >
               Add To Goal!
-            </FormBtn>
+            </Btn> */}
 
             <Line data={data} />
           </form>

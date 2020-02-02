@@ -3,7 +3,8 @@
 import React, { Component } from 'react';
 import Rotate from 'react-reveal/Rotate';
 
-import './Pages.css';
+// Style
+import './Pages.scss';
 
 // Components
 import { Col, Row, Container } from '../../components/Grid';

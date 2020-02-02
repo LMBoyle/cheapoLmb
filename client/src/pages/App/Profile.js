@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import { Col, Row, Container } from '../../components/Grid';
 import Jumbotron from '../../components/Jumbotron';
 import { Card } from '../../components/Card';
-import { FormBtn, Input } from '../../components/Form';
+import { Input } from '../../components/Form';
 
 // Other
 import AUTH from '../../utils/AUTH';
@@ -111,12 +111,12 @@ render(){
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
-                <FormBtn
+                {/* <Btn
                   disabled={!(this.state.firstName && this.state.lastName && this.state.username && this.state.password)}
                   onClick={this.handleSubmit}
                 >
                   Submit Changes!
-                </FormBtn>
+                </Btn> */}
               </form>
             </Card>
           </Col>

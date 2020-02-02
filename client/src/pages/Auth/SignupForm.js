@@ -6,7 +6,7 @@ import { Redirect, Link } from 'react-router-dom';
 // Components
 import { Container, Row, Col } from '../../components/Grid';
 import { Card } from '../../components/Card';
-import { Input, FormBtn } from '../../components/Form';
+import { Input } from '../../components/Form';
 
 // Other
 import AUTH from '../../utils/AUTH';
@@ -105,7 +105,7 @@ class SignupForm extends Component {
                     onChange={this.handleChange}
                   />
                   <Link to='/login'> Login </Link>
-                  <FormBtn onClick={this.handleSubmit}> Register </FormBtn>
+                  {/* <Btn onClick={this.handleSubmit}> Register </Btn> */}
                 </form>
               </Card>
             </Col>
