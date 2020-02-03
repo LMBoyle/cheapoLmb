@@ -1,7 +1,14 @@
+// =========================================== Imports  ===========================================
+
 import React from "react";
-import "./Card.css"
+import "./Card.scss"
+
+// ============================================ Export ============================================
 
 export const Card = (props) => (
+
+  // ========================================= Functions  =========================================
+
   <div 
     className={`card ${props.cardClass}`}
     style={props.styleCard}

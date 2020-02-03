@@ -8,7 +8,6 @@ import '../App/Pages.scss';
 
 // Components
 import { Container, Row, Col } from '../../components/Grid';
-import { Card } from '../../components/Card';
 import { Input } from '../../components/Form';
 import Btn from '../../components/Button'
 import Facebook from '../../components/SocialMedia/Facebook'; 
@@ -81,7 +80,13 @@ class LoginForm extends Component {
                   />
                   <Btn btnColor='green'><Link to='/signup'> Register </Link></Btn>
                   
-                  <Btn btnColor='gold' onClick={this.handleSubmit} style={{float: 'right'}}> Login </Btn>
+                  <Btn 
+                    btnColor='gold' 
+                    onClick={this.handleSubmit} 
+                    style={{float: 'right'}}
+                  > 
+                    Login 
+                  </Btn>
                 </form>
 
               </Col>

@@ -1,0 +1,72 @@
+/* ========================================= Import(s) ========================================= */
+
+@import '../../index';
+
+/* =========================================== List  =========================================== */
+
+.list-overflow-container {
+  max-height: 545px;
+  border: 1px #dddddd solid;
+  border-radius: 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  // .list-overflow-container ul
+  ul {
+    margin: 0;
+  }
+
+  // .list-overflow-container li 
+  li {
+    border-radius: 0px;
+    border-left: none;
+    border-right: none;
+
+    // .list-overflow-container li *
+    * {
+      cursor: pointer;
+    }
+
+    // .list-overflow-container li a
+    a {
+      color: $primary-blue;
+    }
+
+    // .list-overflow-container li:first-child
+    :first-child {
+      border-top: none;
+    }
+
+    // .list-overflow-container li:last-child 
+    :last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+/* ======================================= Goal Circles  ======================================= */
+
+.goal {
+  text-transform: capitalize;
+}
+
+.circle-background,
+.circle-progress {
+  fill: none;
+}
+
+.circle-background {
+  stroke: #ddd;
+}
+
+.circle-progress {
+  stroke: $primary-green;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.circle-text {
+  font-size: 2em;
+  font-weight: bold;
+  fill: $primary-red;
+}

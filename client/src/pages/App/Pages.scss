@@ -56,6 +56,12 @@ button .btn {
   text-transform: capitalize;
 }
 
+/* ========================================== Sign-up ========================================== */
+
+#signupMain {
+  margin: 5rem auto;
+}
+
 /* =========================================== Login =========================================== */
 
 #loginMain {
@@ -76,6 +82,6 @@ button .btn {
 .sepText {
   width: 11%;
   display: inline-block;
-  color: #650D1B;
+  color: $primary-red;
   text-align: center;
 }

@@ -1,5 +1,11 @@
+// =========================================== Imports  ===========================================
+
 import React from "react";
-import "./Headshot.css"
+
+// Style
+import "./Headshot.scss"
+
+// ========================================== Functions  ==========================================
 
 const Headshot = props => (
   <div className="friendConnect">
@@ -8,5 +14,7 @@ const Headshot = props => (
     <button type="button" className="btn"><i className="icon-group icon-3x"></i></button>
   </div>
 );
+
+// ============================================ Export ============================================
 
 export default Headshot;

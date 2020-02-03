@@ -1,0 +1,33 @@
+/* ========================================= Import(s) ========================================= */
+
+@import '../../index';
+
+/* ========================================= Headshot  ========================================= */
+
+.friendConnect {
+  margin: 15px 0;
+
+  // .friendConnect img
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 8px $primary-gold, inset 0 0 8px $primary-gold;
+  }
+
+  // .friendConnect p
+  p {
+    display: inline;
+    font-size: 50px;
+    font-weight: bolder;
+    color: $primary-red
+  }
+}
+
+.btn {
+  color: $primary-red;
+}
+
+.icon-group:before {
+  vertical-align: super;
+}

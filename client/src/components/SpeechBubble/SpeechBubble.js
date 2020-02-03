@@ -1,5 +1,5 @@
 import React from "react";
-import "./Bubble.css"
+import "./Bubble.scss"
 
 const SpeechBubble = (props) => (
   <div className="bubbleWrap">

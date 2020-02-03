@@ -1,9 +1,16 @@
 /* ======================================= Color Scheme  ======================================= */
 
-$primary-gold   : #BF7E04;
-$primary-red    : #650D1B;
-$primary-green  : #577720;
-$primary-blue   : #6893A1;
+// Primary
+$primary-gold   : rgb(191, 126, 4);   //#bf7e04
+$primary-red    : rgb(99, 13, 27);    //#630d1b
+$primary-green  : rgb(88, 121, 32);   //#587920
+$primary-blue   : rgb(104, 147, 161); //#6893a1
+
+// Primary W/Opacity
+$ghost-gold   : rgba(191, 126, 4, 0.25);
+$ghost-red    : rgba(99, 13, 27, 0.25);
+$ghost-green  : rgba(88, 121, 32, 0.25);
+$ghost-blue   : rgba(104, 147, 161, 0.25);
 
 /* ========================================= HTML/Body ========================================= */
 
@@ -20,4 +27,16 @@ html {
   position: relative;
 }
 
+/* ==================================== Bootstrap Override  ==================================== */
+
+.bg-light {
+  background-color: $primary-blue!important;
+}
+
+/* =========================================== Forms =========================================== */
+
+.form-control:focus {
+  border-color: $primary-green;
+  box-shadow: 0 0 0 0.2rem $ghost-green;
+}
 

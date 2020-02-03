@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login'
-import "./Facebook.css"
 
 export default class Facebook extends Component {
   state = {

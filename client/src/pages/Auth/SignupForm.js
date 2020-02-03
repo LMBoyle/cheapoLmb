@@ -7,6 +7,7 @@ import { Redirect, Link } from 'react-router-dom';
 import { Container, Row, Col } from '../../components/Grid';
 import { Card } from '../../components/Card';
 import { Input } from '../../components/Form';
+import Btn from '../../components/Button';
 
 // Other
 import AUTH from '../../utils/AUTH';
@@ -28,30 +29,32 @@ class SignupForm extends Component {
     };
   }
 
-  handleChange = (event) => {
+  handleChange = (e) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
     // TODO - validate!
-    AUTH.signup({
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      username: this.state.username,
-      password: this.state.password
-    }).then(response => {
-      // console.log(response);
-      if (!response.data.errmsg) {
-        this.setState({
-          redirectTo: '/'
-        });
-      } else {
-        console.log('duplicate');
-      }
-    });
+    AUTH
+      .signup({
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        username: this.state.username,
+        password: this.state.password
+      })
+      .then(res => {
+        if (!res.data.errmsg) {
+          this.setState({
+            redirectTo: '/'
+          });
+        } 
+        else {
+          console.log('duplicate');
+        }
+      });
   }
 
   render() {
@@ -61,57 +64,65 @@ class SignupForm extends Component {
 
     return (
       <Container>
-        <Card
-          cardClass={'cardWrap'}
-        >
-          <Row>
-            <Col size='md-3'></Col>
+        <main id='signupMain'>
+          <Row justify='content-md-center'>
             <Col size='md-6'>
-              <Card title='Register for Cheapo'>
-                <form style={{ marginTop: 10 }}>
-                  <label htmlFor='username'> First name: </label>
-                  <Input
-                    type='text'
-                    name='firstName'
-                    value={this.state.firstName}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor='username'> Last name: </label>
-                  <Input
-                    type='text'
-                    name='lastName'
-                    value={this.state.lastName}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor='username'> Username: </label>
-                  <Input
-                    type='text'
-                    name='username'
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor='password'> Password: </label>
-                  <Input
-                    type='password'
-                    name='password'
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                  />
-                  <label htmlFor='confirmPassword'> Confirm Password: </label>
-                  <Input
-                    type='password'
-                    name='confirmPassword'
-                    value={this.state.confirmPassword}
-                    onChange={this.handleChange}
-                  />
-                  <Link to='/login'> Login </Link>
-                  {/* <Btn onClick={this.handleSubmit}> Register </Btn> */}
-                </form>
-              </Card>
+              <form style={{ marginTop: 10 }}>
+
+                <label htmlFor='username'> First name: </label>
+                <Input
+                  type='text'
+                  name='firstName'
+                  value={this.state.firstName}
+                  onChange={this.handleChange}
+                />
+
+                <label htmlFor='username'> Last name: </label>
+                <Input
+                  type='text'
+                  name='lastName'
+                  value={this.state.lastName}
+                  onChange={this.handleChange}
+                />
+
+                <label htmlFor='username'> Username: </label>
+                <Input
+                  type='text'
+                  name='username'
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                />
+
+                <label htmlFor='password'> Password: </label>
+                <Input
+                  type='password'
+                  name='password'
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                />
+
+                <label htmlFor='confirmPassword'> Confirm Password: </label>
+                <Input
+                  type='password'
+                  name='confirmPassword'
+                  value={this.state.confirmPassword}
+                  onChange={this.handleChange}
+                />
+
+                <Btn btnColor='gold'><Link to='/login'> Login </Link></Btn>
+                
+                <Btn 
+                  btnColor='green' 
+                  onClick={this.handleSubmit}
+                  style={{float: 'right'}}
+                > 
+                  Register 
+                </Btn>
+              </form>
+
             </Col>
-            <Col size='md-3'></Col>
           </Row>
-        </Card>
+        </main>
       </Container>
     )
   }

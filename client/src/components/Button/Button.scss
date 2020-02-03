@@ -7,8 +7,14 @@
 .btn {
   margin-top: 10px;
   color: white!important;
+
   a {
     color: white!important;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $ghost-green;
   }
 }
 
@@ -16,12 +22,15 @@
   &gold {
     background-color: $primary-gold;
   }
+
   &red {
     background-color: $primary-red;
   }
+
   &green {
     background-color: $primary-green;
   }
+  
   &blue {
     background-color: $primary-blue;
   }
