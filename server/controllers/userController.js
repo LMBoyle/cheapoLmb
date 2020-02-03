@@ -9,8 +9,7 @@ module.exports = {
   // Methods ======================================================================================
   // Defining methods for the userController
   
-  getUser: (req, res, next) => {
-    // console.log("in userController.js, getUser");
+  getUser: (req, res, next) => {;
     if (req.user) {
       return res.json({ user: req.user });
     } else {

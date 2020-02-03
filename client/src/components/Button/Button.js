@@ -10,7 +10,7 @@ import './Button.scss'
 const Btn = props => (
   <button 
     type='button'
-    className={`btn btn-${props.btnColor}`}
+    className={`btn btn-${props.btnColor ? props.btnColor : 'green'}`}
     {...props}
   >
     {props.children}
